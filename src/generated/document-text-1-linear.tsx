@@ -1,13 +1,11 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const DocumentTextIcon1Linear: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const DocumentTextIcon1Linear: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M22 10V15C22 20 20 22 15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H14" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M22 10H18C15 10 14 9 14 6V2L22 10Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M7 13H13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M7 17H11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

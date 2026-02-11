@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const QuantQntBulk: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const QuantQntBulk: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path opacity="0.58" d="M24 0H0V24H24V0Z" fill="white"/>
       <path opacity="0.6" d="M21 7V12L17 14.78V9.23L21 7Z" fill="currentColor"/>
       <path opacity="0.6" d="M12 17.56V22L3 17L7 14.77V14.78L12 17.56Z" fill="currentColor"/>
@@ -13,6 +12,5 @@ export const QuantQntBulk: React.FC<IconProps> = (props) => {
       <path d="M17 14.7803V19.5003L12 22.0003V17.5603L17 14.7803Z" fill="currentColor"/>
       <path opacity="0.4" d="M21 17.0003V22.0003L17 19.5003V14.7803L21 17.0003Z" fill="currentColor"/>
       <path opacity="0.4" d="M17 9.21994V14.7799L12 17.5599L7 14.7799V9.21994L12 6.43994L17 9.21994Z" fill="currentColor"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

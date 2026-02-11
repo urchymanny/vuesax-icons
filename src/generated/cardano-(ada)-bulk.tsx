@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const CardanoAdaBulk: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const CardanoAdaBulk: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M24 0H0V24H24V0Z" fill="white"/>
       <g opacity="0.6">
       <path opacity="0.6" d="M17.1484 10C17.7007 10 18.1484 9.55228 18.1484 9C18.1484 8.44772 17.7007 8 17.1484 8C16.5962 8 16.1484 8.44772 16.1484 9C16.1484 9.55228 16.5962 10 17.1484 10Z" fill="currentColor"/>
@@ -61,6 +60,5 @@ export const CardanoAdaBulk: React.FC<IconProps> = (props) => {
       <g opacity="0.4">
       <path opacity="0.4" d="M20.3008 7.75977C19.8908 7.75977 19.5508 7.41977 19.5508 7.00977C19.5508 6.59977 19.8908 6.25977 20.3008 6.25977C20.7108 6.25977 21.0508 6.58977 21.0508 6.99977V7.00977C21.0508 7.41977 20.7108 7.75977 20.3008 7.75977Z" fill="currentColor"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

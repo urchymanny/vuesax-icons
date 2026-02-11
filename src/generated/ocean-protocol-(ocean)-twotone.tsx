@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const OceanProtocolOceanTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const OceanProtocolOceanTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M12 3.2002V3.2102" stroke="black" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M12 7.7002V7.7102" stroke="black" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M12 11.7002V11.7102" stroke="black" strokeWidth="3" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -28,6 +27,5 @@ export const OceanProtocolOceanTwotone: React.FC<IconProps> = (props) => {
       <path opacity="0.4" d="M16.2002 13.7002V13.7102" stroke="black" strokeWidth="2" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path opacity="0.4" d="M16.2002 16.7002V16.7102" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path opacity="0.4" d="M16.2002 19.7002V19.7102" stroke="black" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

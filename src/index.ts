@@ -1,4 +1,4 @@
-export { Icon, type IconProps } from './Icon';
+export { Icon, type IconProps, type VuesaxIconComponent } from './Icon';
 
 export { Icon24SupportBold } from './generated/24-support-bold';
 export { Icon24SupportBroken } from './generated/24-support-broken';

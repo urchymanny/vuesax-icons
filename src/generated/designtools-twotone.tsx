@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const DesigntoolsTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const DesigntoolsTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <g clipPath="url(#clip0_3195_3374)">
       <path d="M10.4293 17.6198C10.4293 18.7198 10.0093 19.7698 9.2193 20.5698C8.6093 21.1798 7.7793 21.5998 6.7893 21.7298L4.3293 21.9998C2.9893 22.1498 1.8393 21.0098 1.9993 19.6498L2.2693 17.1898C2.5093 14.9998 4.3393 13.5998 6.2793 13.5598C6.4793 13.5498 6.6893 13.5598 6.8793 13.5698C7.7293 13.6798 8.5593 14.0698 9.2393 14.7598C9.9093 15.4298 10.2893 16.2098 10.3993 17.0498C10.4093 17.2398 10.4293 17.4298 10.4293 17.6198Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <g opacity="0.4">
@@ -20,6 +19,5 @@ export const DesigntoolsTwotone: React.FC<IconProps> = (props) => {
       <rect width="24" height="24" fill="white"/>
       </clipPath>
       </defs>
-    </Icon>
-  );
-};
+  </Icon>
+));

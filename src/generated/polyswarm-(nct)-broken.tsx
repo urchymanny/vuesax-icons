@@ -1,14 +1,12 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const PolyswarmNctBroken: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const PolyswarmNctBroken: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M19.72 14.8999C18.44 16.3399 16.57 17.2499 14.5 17.2499H3.5" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M9.5 3.25H14.5C18.35 3.25 21.5 6.4 21.5 10.25" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M3.16992 6.75H13.8099C15.8399 6.75 17.4999 8.41 17.4999 10.44C17.4999 12.47 15.8399 14.13 13.8099 14.13H7.99994" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M8.5 10.75H5.5" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M6.5 20.75H2.5" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

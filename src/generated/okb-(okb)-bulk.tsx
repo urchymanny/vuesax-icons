@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const OkbOkbBulk: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const OkbOkbBulk: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M24 0H0V24H24V0Z" fill="white"/>
       <path opacity="0.4" d="M22 12C22 14.76 19.76 17 17 17C17 14.24 14.76 12 12 12C14.76 12 17 9.76 17 7C19.76 7 22 9.24 22 12Z" fill="currentColor"/>
       <path d="M17 17C14.24 17 12 14.76 12 12C14.76 12 17 14.24 17 17Z" fill="currentColor"/>
@@ -13,6 +12,5 @@ export const OkbOkbBulk: React.FC<IconProps> = (props) => {
       <path d="M12 12C12 14.76 9.76 17 7 17C7 14.24 9.24 12 12 12Z" fill="currentColor"/>
       <path d="M12 12C9.24 12 7 9.76 7 7C9.76 7 12 9.24 12 12Z" fill="currentColor"/>
       <path opacity="0.4" d="M12 12C9.24 12 7 14.24 7 17C4.24 17 2 14.76 2 12C2 9.24 4.24 7 7 7C7 9.76 9.24 12 12 12Z" fill="currentColor"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

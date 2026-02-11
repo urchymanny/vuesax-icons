@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const FigmaTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const FigmaTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <g opacity="0.4">
       <path d="M12 6H10C8.9 6 8 6.9 8 8C8 9.1 8.9 10 10 10H12V6Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10"/>
       <path d="M12 10H10C8.9 10 8 10.9 8 12C8 13.1 8.9 14 10 14H12V10Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10"/>
@@ -12,6 +11,5 @@ export const FigmaTwotone: React.FC<IconProps> = (props) => {
       <path d="M14 10C15.1 10 16 10.9 16 12C16 13.1 15.1 14 14 14C12.9 14 12 13.1 12 12C12 10.9 12.9 10 14 10Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10"/>
       </g>
       <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

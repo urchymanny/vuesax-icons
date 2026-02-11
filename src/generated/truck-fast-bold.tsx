@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const TruckFastBold: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const TruckFastBold: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M21.5 15.5C21.78 15.5 22 15.72 22 16V17C22 18.66 20.66 20 19 20C19 18.35 17.65 17 16 17C14.35 17 13 18.35 13 20H11C11 18.35 9.65 17 8 17C6.35 17 5 18.35 5 20C3.34 20 2 18.66 2 17V15C2 14.45 2.45 14 3 14H12.5C13.88 14 15 12.88 15 11.5V6C15 5.45 15.45 5 16 5H16.84C17.56 5 18.22 5.39 18.58 6.01L19.22 7.13C19.31 7.29 19.19 7.5 19 7.5C17.62 7.5 16.5 8.62 16.5 10V13C16.5 14.38 17.62 15.5 19 15.5H21.5Z" fill="currentColor"/>
       <path d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z" fill="currentColor"/>
       <path d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z" fill="currentColor"/>
@@ -12,6 +11,5 @@ export const TruckFastBold: React.FC<IconProps> = (props) => {
       <path d="M2.07 4.98047H1.92H0.94C0.56 4.98047 0.25 5.29047 0.25 5.67047C0.25 6.05047 0.56 6.35047 0.94 6.35047H1.85H2V5.69047C2 5.45047 2.03 5.21047 2.07 4.98047Z" fill="currentColor"/>
       <path d="M1.85 7.73047H0.94C0.56 7.73047 0.25 8.04047 0.25 8.42047C0.25 8.80047 0.56 9.10047 0.94 9.10047H1.85H2V7.73047H1.85Z" fill="currentColor"/>
       <path d="M1.85 10.4805H0.94C0.56 10.4805 0.25 10.7905 0.25 11.1705C0.25 11.5505 0.56 11.8505 0.94 11.8505H1.85H2V10.4805H1.85Z" fill="currentColor"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

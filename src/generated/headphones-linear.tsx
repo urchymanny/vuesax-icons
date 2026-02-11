@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const HeadphonesLinear: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const HeadphonesLinear: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M8.5 12V7.21997" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M8.5 22V19" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M15.5 22V7.21997" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -12,6 +11,5 @@ export const HeadphonesLinear: React.FC<IconProps> = (props) => {
       <path d="M13.8999 5.29999C13.8999 5.78999 14.0999 6.25001 14.4299 6.57001C14.7499 6.90001 15.1999 7.09998 15.6999 7.09998H17.9499C17.6699 6.72998 17.4999 6.25 17.4999 5.75V4.84998C17.4999 4.34998 17.6699 3.87 17.9499 3.5H15.6999C14.7099 3.5 13.8999 4.30999 13.8999 5.29999Z" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M17.5 4.85002V5.75005C17.5 6.25005 17.67 6.73002 17.95 7.10002C18.71 8.11002 20.27 8.45002 21.72 7.16002C21.88 7.02002 22 6.72005 22 6.50005V4.16002C22 3.97002 21.9 3.69003 21.77 3.55003C20.51 2.23003 18.99 2.42005 18.16 3.25005C18.09 3.32005 18.02 3.40004 17.95 3.49004C17.67 3.87004 17.5 4.35002 17.5 4.85002Z" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M10 13.5V17.5C10 18.33 9.33 19 8.5 19C7.67 19 7 18.33 7 17.5V13.5C7 12.67 7.67 12 8.5 12C9.33 12 10 12.67 10 13.5Z" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

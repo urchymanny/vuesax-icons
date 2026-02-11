@@ -102,16 +102,14 @@ function createIconComponent(iconName, variant, svgContent) {
     .map(line => '      ' + line)
     .join('\n');
 
-  return `import React from 'react';
-import { Icon, IconProps } from '../Icon';
+  return `import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const ${componentName}: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const ${componentName}: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
 ${formattedContent}
-    </Icon>
-  );
-};
+  </Icon>
+));
 `;
 }
 
@@ -224,7 +222,7 @@ function generateIndexFile(exports, groupedExports) {
     return `  ${quoteKey(iconName)}: {\n${variantExports}\n  }`;
   }).join(',\n')}\n} as const;`;
 
-  const indexContent = `export { Icon, type IconProps } from './Icon';
+  const indexContent = `export { Icon, type IconProps, type VuesaxIconComponent } from './Icon';
 
 ${individualExports}
 

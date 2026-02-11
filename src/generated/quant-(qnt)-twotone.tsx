@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const QuantQntTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const QuantQntTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M12 6.43994L7 9.21994V14.7799L12 17.5599L17 14.7799V9.21994L12 6.43994Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <g opacity="0.4">
       <path d="M12 2L3 7V17L12 22L17 19.5L21 22V17L17 14.78L21 12V7L12 2Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -14,6 +13,5 @@ export const QuantQntTwotone: React.FC<IconProps> = (props) => {
       <path d="M12 22V18" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M17 20V15" stroke="black" strokeWidth="1.5" strokeMiterlimit="10"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

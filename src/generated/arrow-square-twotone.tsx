@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const ArrowSquareTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const ArrowSquareTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <g opacity="0.4">
       <path d="M12.1406 15.0701V13.11C12.1406 10.59 14.1806 8.54004 16.7106 8.54004H18.6706" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M5.62109 8.5498H7.58112C10.1011 8.5498 12.1511 10.5898 12.1511 13.1198V13.7698V17.2498" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -11,6 +10,5 @@ export const ArrowSquareTwotone: React.FC<IconProps> = (props) => {
       <path d="M16.8594 6.75L18.6594 8.55L16.8594 10.35" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
       <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

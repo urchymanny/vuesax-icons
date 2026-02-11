@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const DevicesBroken: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const DevicesBroken: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M15.7194 9.69002C13.6694 7.63002 10.3294 7.63002 8.27937 9.69002C6.21938 11.75 6.21938 15.08 8.27937 17.13C10.3394 19.19 13.6694 19.19 15.7194 17.13C16.7494 16.1 17.2594 14.76 17.2594 13.41" stroke="currentColor" strokeWidth="1.5093" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M12.0002 13.4099L10.4102 14.9999" stroke="currentColor" strokeWidth="1.5093" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M19.0708 6.33997C19.2208 6.48997 19.2208 6.73997 19.0708 6.89997C18.9208 7.04997 18.6708 7.04997 18.5108 6.89997C18.3508 6.74997 18.3608 6.49997 18.5108 6.33997C18.6608 6.17997 18.9208 6.17997 19.0708 6.33997Z" stroke="currentColor" strokeMiterlimit="10"/>
@@ -20,6 +19,5 @@ export const DevicesBroken: React.FC<IconProps> = (props) => {
       <path d="M5.49086 6.33997C5.64086 6.48997 5.64086 6.73997 5.49086 6.89997C5.34086 7.05997 5.09086 7.04997 4.93086 6.89997C4.78086 6.74997 4.78086 6.49997 4.93086 6.33997C5.08086 6.17997 5.34086 6.17997 5.49086 6.33997Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M12.2798 3.52009C12.4298 3.67009 12.4298 3.92009 12.2798 4.08009C12.1298 4.24009 11.8798 4.23009 11.7198 4.08009C11.5598 3.93009 11.5698 3.68009 11.7198 3.52009C11.8698 3.36009 12.1298 3.37009 12.2798 3.52009Z" stroke="currentColor" strokeMiterlimit="10"/>
       <path d="M12.2798 3.52009C12.4298 3.67009 12.4298 3.92009 12.2798 4.08009C12.1298 4.24009 11.8798 4.23009 11.7198 4.08009C11.5598 3.93009 11.5698 3.68009 11.7198 3.52009C11.8698 3.36009 12.1298 3.37009 12.2798 3.52009Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

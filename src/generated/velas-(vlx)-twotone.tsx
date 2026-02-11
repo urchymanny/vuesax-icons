@@ -1,11 +1,9 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const VelasVlxTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const VelasVlxTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M2 3.02979H22" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path opacity="0.4" d="M4.0399 6.35986H19.9699C20.8499 6.35986 21.3799 7.32986 20.8999 8.06986L12.9399 20.4599C12.4999 21.1399 11.5099 21.1399 11.0699 20.4599L3.10988 8.06986C2.62988 7.32986 3.1599 6.35986 4.0399 6.35986Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

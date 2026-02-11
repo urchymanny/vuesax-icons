@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const EraserIcon1Twotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const EraserIcon1Twotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M9 22H21" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M2.9107 17.5802L6.42071 21.0902C7.59071 22.2602 9.5007 22.2602 10.6607 21.0902L21.0908 10.6602C22.2608 9.49021 22.2608 7.58021 21.0908 6.42021L17.5807 2.91021C16.4107 1.74021 14.5008 1.74021 13.3408 2.91021L2.9107 13.3402C1.7407 14.5002 1.7407 16.4102 2.9107 17.5802Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <g opacity="0.4">
@@ -11,6 +10,5 @@ export const EraserIcon1Twotone: React.FC<IconProps> = (props) => {
       <path d="M3.51953 17.66L9.16949 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M6.33984 20.4901L11.9998 14.8301" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const BrifecaseCrossTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const BrifecaseCrossTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <g opacity="0.4">
       <path d="M13.0692 15.3102L10.9492 13.2002" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M13.0497 13.2197L10.9297 15.3397" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -15,6 +14,5 @@ export const BrifecaseCrossTwotone: React.FC<IconProps> = (props) => {
       <path d="M21.6498 11C19.9198 12.26 17.9998 13.14 16.0098 13.64" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M2.61914 11.2695C4.28914 12.4095 6.10914 13.2195 7.99914 13.6795" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

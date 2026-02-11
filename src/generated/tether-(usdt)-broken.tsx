@@ -1,12 +1,10 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const TetherUsdtBroken: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const TetherUsdtBroken: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M18.1004 16.2201L14.0804 19.8701C12.9304 20.9101 11.0604 20.9101 9.91044 19.8701L2.98044 13.5801C2.02044 12.7101 1.71043 11.0601 2.29043 9.90011L4.69044 5.08011C5.16044 4.13011 6.41044 3.36011 7.47044 3.36011H16.5304C17.5904 3.36011 18.8404 4.13011 19.3104 5.08011L21.7104 9.90011C22.2904 11.0601 21.9704 12.7101 21.0204 13.5801" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M12 14.5V8.5" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M8 8.5H16" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

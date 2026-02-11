@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const DevicesIcon1Linear: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const DevicesIcon1Linear: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M15.7199 9.69002C17.7799 11.75 17.7799 15.08 15.7199 17.13C13.6599 19.19 10.3299 19.19 8.27986 17.13C6.21986 15.07 6.21986 11.74 8.27986 9.69002C10.3299 7.63002 13.6699 7.63002 15.7199 9.69002Z" stroke="currentColor" strokeWidth="1.5093" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M11.9999 13.4099L10.4099 14.9999" stroke="currentColor" strokeWidth="1.5093" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M19.0701 6.33997C19.2201 6.48997 19.2201 6.73997 19.0701 6.89997C18.9201 7.04997 18.6701 7.04997 18.5101 6.89997C18.3501 6.74997 18.3601 6.49997 18.5101 6.33997C18.6601 6.17997 18.9201 6.17997 19.0701 6.33997Z" stroke="currentColor" strokeMiterlimit="10"/>
@@ -20,6 +19,5 @@ export const DevicesIcon1Linear: React.FC<IconProps> = (props) => {
       <path d="M5.48988 6.33997C5.63988 6.48997 5.63988 6.73997 5.48988 6.89997C5.33988 7.05997 5.08988 7.04997 4.92988 6.89997C4.77988 6.74997 4.77988 6.49997 4.92988 6.33997C5.07988 6.17997 5.33988 6.17997 5.48988 6.33997Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M12.28 3.52009C12.43 3.67009 12.43 3.92009 12.28 4.08009C12.13 4.24009 11.88 4.23009 11.72 4.08009C11.56 3.93009 11.57 3.68009 11.72 3.52009C11.87 3.36009 12.13 3.37009 12.28 3.52009Z" stroke="currentColor" strokeMiterlimit="10"/>
       <path d="M12.28 3.52009C12.43 3.67009 12.43 3.92009 12.28 4.08009C12.13 4.24009 11.88 4.23009 11.72 4.08009C11.56 3.93009 11.57 3.68009 11.72 3.52009C11.87 3.36009 12.13 3.37009 12.28 3.52009Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

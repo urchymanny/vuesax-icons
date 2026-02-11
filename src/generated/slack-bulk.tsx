@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const SlackBulk: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const SlackBulk: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path opacity="0.58" d="M24 0H0V24H24V0Z" fill="white"/>
       <path d="M14.5405 1.87988C13.3105 1.87988 12.3105 2.87989 12.3105 4.10989V8.74989C12.3105 9.97989 13.3105 10.9799 14.5405 10.9799C15.7705 10.9799 16.7706 9.97989 16.7706 8.74989V4.10989C16.7706 2.88989 15.7705 1.87988 14.5405 1.87988Z" fill="currentColor"/>
       <path opacity="0.4" d="M20.1802 7.10986C19.1102 7.10986 18.2402 7.97987 18.2402 9.04987V10.6199C18.2402 10.8299 18.4102 10.9999 18.6202 10.9999H20.1902C21.2602 10.9999 22.1302 10.1299 22.1302 9.05986C22.1302 7.98986 21.2502 7.10986 20.1802 7.10986Z" fill="currentColor"/>
@@ -13,6 +12,5 @@ export const SlackBulk: React.FC<IconProps> = (props) => {
       <path opacity="0.4" d="M5.3596 13.0303H3.7896C2.7196 13.0303 1.84961 13.9003 1.84961 14.9703C1.84961 16.0403 2.7196 16.9103 3.7896 16.9103C4.8596 16.9103 5.7296 16.0403 5.7296 14.9703V13.4003C5.7296 13.2003 5.5596 13.0303 5.3596 13.0303Z" fill="currentColor"/>
       <path d="M20.1102 12.5698H15.4702C14.2402 12.5698 13.2402 13.5698 13.2402 14.7998C13.2402 16.0298 14.2402 17.0298 15.4702 17.0298H20.1102C21.3402 17.0298 22.3402 16.0298 22.3402 14.7998C22.3402 13.5698 21.3402 12.5698 20.1102 12.5698Z" fill="currentColor"/>
       <path opacity="0.4" d="M15.1805 18.4697H13.6105C13.4005 18.4697 13.2305 18.6397 13.2305 18.8497V20.4197C13.2305 21.4897 14.1005 22.3597 15.1705 22.3597C16.2405 22.3597 17.1105 21.4897 17.1105 20.4197C17.1205 19.3397 16.2505 18.4697 15.1805 18.4697Z" fill="currentColor"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

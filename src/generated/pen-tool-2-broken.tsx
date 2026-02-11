@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const PenToolIcon2Broken: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const PenToolIcon2Broken: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M10.7513 22.4999H13.2713C14.2313 22.4999 14.8513 21.8199 14.6713 20.9899L14.2613 19.1799H9.76129L9.3513 20.9899C9.1713 21.7699 9.8513 22.4999 10.7513 22.4999Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M14.2208 12.6699L13.1708 11.3399C12.5308 10.5299 11.4808 10.5299 10.8408 11.3399L7.79077 15.2099C7.02077 16.1799 7.02078 16.8099 8.03078 17.6399L9.76078 19.1799" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M14.2617 19.1698L15.9917 17.6298C16.9617 16.7698 17.0017 16.1697 16.2317 15.1997" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -14,6 +13,5 @@ export const PenToolIcon2Broken: React.FC<IconProps> = (props) => {
       <path d="M3.75 11.17C3.75 9.20004 4.49001 7.41005 5.71001 6.05005" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M10.5199 3.56006C9.87993 3.64006 9.25992 3.79007 8.66992 4.01007" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M20.2495 11.17C20.2495 7.25004 17.3095 4.03006 13.5195 3.56006" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

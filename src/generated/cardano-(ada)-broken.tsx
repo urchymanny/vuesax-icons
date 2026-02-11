@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const CardanoAdaBroken: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const CardanoAdaBroken: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M13.75 10C14.3023 10 14.75 9.55228 14.75 9C14.75 8.44772 14.3023 8 13.75 8C13.1977 8 12.75 8.44772 12.75 9C12.75 9.55228 13.1977 10 13.75 10Z" stroke="black" strokeMiterlimit="10"/>
       <path d="M10.25 10C10.8 10 11.25 9.55 11.25 9C11.25 8.45 10.8 8 10.25 8" stroke="black" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M15.5 13C16.0523 13 16.5 12.5523 16.5 12C16.5 11.4477 16.0523 11 15.5 11C14.9477 11 14.5 11.4477 14.5 12C14.5 12.5523 14.9477 13 15.5 13Z" stroke="black" strokeMiterlimit="10"/>
@@ -34,6 +33,5 @@ export const CardanoAdaBroken: React.FC<IconProps> = (props) => {
       <path d="M11.9492 21.55V21.55" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M1.5 12.05V12.05" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M22.4492 12.05V12.05" stroke="black" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

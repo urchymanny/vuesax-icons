@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const Icon3dCubeScanTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const Icon3dCubeScanTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M2 9V7C2 4 4 2 7 2H17C20 2 22 4 22 7V9" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M2 15V17C2 20 4 22 7 22H17C20 22 22 20 22 17V15" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <g opacity="0.4">
@@ -11,6 +10,5 @@ export const Icon3dCubeScanTwotone: React.FC<IconProps> = (props) => {
       <path d="M12 17.7703V12.3203" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M10.7602 6.29006L7.56023 8.07009C6.84023 8.47009 6.24023 9.48008 6.24023 10.3101V13.7001C6.24023 14.5301 6.83023 15.5401 7.56023 15.9401L10.7602 17.7201C11.4402 18.1001 12.5602 18.1001 13.2502 17.7201L16.4502 15.9401C17.1702 15.5401 17.7702 14.5301 17.7702 13.7001V10.3101C17.7702 9.48008 17.1802 8.47009 16.4502 8.07009L13.2502 6.29006C12.5602 5.90006 11.4402 5.90006 10.7602 6.29006Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

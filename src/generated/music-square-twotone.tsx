@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const MusicSquareTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const MusicSquareTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22H15C20 22 22 20 22 15Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <g opacity="0.4">
       <path d="M8.41962 17.1097C9.2867 17.1097 9.98962 16.4068 9.98962 15.5397C9.98962 14.6726 9.2867 13.9697 8.41962 13.9697C7.55253 13.9697 6.84961 14.6726 6.84961 15.5397C6.84961 16.4068 7.55253 17.1097 8.41962 17.1097Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -11,6 +10,5 @@ export const MusicSquareTwotone: React.FC<IconProps> = (props) => {
       <path d="M14.1794 16.0599C15.0465 16.0599 15.7494 15.357 15.7494 14.4899C15.7494 13.6228 15.0465 12.9199 14.1794 12.9199C13.3123 12.9199 12.6094 13.6228 12.6094 14.4899C12.6094 15.357 13.3123 16.0599 14.1794 16.0599Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M9.99023 11.0397L15.7502 9.46973" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

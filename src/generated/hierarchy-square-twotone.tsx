@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const HierarchySquareTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const HierarchySquareTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <g opacity="0.4">
       <path d="M16.4508 14.4V8.5C16.4508 7.95 16.0008 7.5 15.4508 7.5H12.5508" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M14.05 6L12.25 7.5L14.05 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -13,6 +12,5 @@ export const HierarchySquareTwotone: React.FC<IconProps> = (props) => {
       <path d="M16.4504 17.9999C17.4445 17.9999 18.2504 17.194 18.2504 16.1999C18.2504 15.2058 17.4445 14.3999 16.4504 14.3999C15.4563 14.3999 14.6504 15.2058 14.6504 16.1999C14.6504 17.194 15.4563 17.9999 16.4504 17.9999Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
       <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

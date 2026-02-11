@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const BitcoinBtcTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const BitcoinBtcTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10"/>
       <g opacity="0.4">
       <path d="M8.7793 7.66992H14.1993C15.3993 7.66992 16.3693 8.74992 16.3693 9.83992C16.3693 11.0399 15.3993 12.0099 14.1993 12.0099H8.7793V7.66992Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -15,6 +14,5 @@ export const BitcoinBtcTwotone: React.FC<IconProps> = (props) => {
       <path d="M10.8398 7.66992H7.0498" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M10.8398 16.3301H7.0498" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

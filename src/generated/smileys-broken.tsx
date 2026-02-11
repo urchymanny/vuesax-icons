@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const SmileysBroken: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const SmileysBroken: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M2 6.19995C2 3.19995 3.2 2 6.2 2H9.8C12.8 2 14 3.19995 14 6.19995V10C11.21 10.05 10.05 11.21 10 14H6.2C3.2 14 2 12.8 2 9.80005" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M6.95922 5.86996C6.42922 5.50996 5.72922 5.50998 5.19922 5.88998" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M10.9592 5.86996C10.4292 5.50996 9.72922 5.50998 9.19922 5.88998" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -12,6 +11,5 @@ export const SmileysBroken: React.FC<IconProps> = (props) => {
       <path d="M14.9592 13.62C14.4292 13.98 13.7292 13.98 13.1992 13.6" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M18.9592 13.62C18.4292 13.98 17.7292 13.98 17.1992 13.6" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M13.8408 16.1801H18.1608C18.4608 16.1801 18.7008 16.42 18.7008 16.72C18.7008 18.21 17.4908 19.42 16.0008 19.42C14.5108 19.42 13.3008 18.21 13.3008 16.72C13.3008 16.42 13.5408 16.1801 13.8408 16.1801Z" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

@@ -1,6 +1,6 @@
-import React from "react";
+import React, { ForwardRefExoticComponent, RefAttributes } from "react";
 
-export interface IconProps extends React.SVGProps<SVGSVGElement> {
+export interface IconProps extends Omit<React.SVGProps<SVGSVGElement>, "ref"> {
   size?: number | string;
   width?: number | string;
   height?: number | string;
@@ -8,7 +8,9 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
   color?: string;
 }
 
-export const Icon: React.FC<IconProps & { children: React.ReactNode }> = ({
+export type VuesaxIconComponent = ForwardRefExoticComponent<Omit<IconProps, "ref"> & RefAttributes<SVGSVGElement>>;
+
+const BaseIconRenderer = React.forwardRef<SVGSVGElement, IconProps & { children: React.ReactNode }>(({
   size,
   width,
   height,
@@ -17,7 +19,7 @@ export const Icon: React.FC<IconProps & { children: React.ReactNode }> = ({
   children,
   style,
   ...props
-}) => {
+}, ref) => {
   // Calculate dimensions - respect viewBox ratio (24x24)
   const viewBox = "0 0 24 24";
   const aspectRatio = 24 / 24; // 1:1
@@ -87,6 +89,7 @@ export const Icon: React.FC<IconProps & { children: React.ReactNode }> = ({
 
   return (
     <svg
+      ref={ref}
       width={finalWidth}
       height={finalHeight}
       viewBox={viewBox}
@@ -98,4 +101,6 @@ export const Icon: React.FC<IconProps & { children: React.ReactNode }> = ({
       {processedChildren}
     </svg>
   );
-};
+});
+
+export { BaseIconRenderer as Icon };

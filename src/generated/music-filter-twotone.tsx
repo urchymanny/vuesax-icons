@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const MusicFilterTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const MusicFilterTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M2 3H22" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M2 9H11" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M2 15H8" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
@@ -14,6 +13,5 @@ export const MusicFilterTwotone: React.FC<IconProps> = (props) => {
       <path d="M19.8206 20.5499C21.0246 20.5499 22.0006 19.5739 22.0006 18.3699C22.0006 17.166 21.0246 16.1899 19.8206 16.1899C18.6166 16.1899 17.6406 17.166 17.6406 18.3699C17.6406 19.5739 18.6166 20.5499 19.8206 20.5499Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M14.0195 13.5999L21.9995 11.4199" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

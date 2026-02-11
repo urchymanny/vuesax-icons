@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const UsdCoinUsdcTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const UsdCoinUsdcTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path opacity="0.4" d="M16.9502 16.9498C19.6802 14.2198 19.6802 9.7798 16.9502 7.0498" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path opacity="0.4" d="M7.05043 7.0498C4.32043 9.7798 4.32043 14.2198 7.05043 16.9498" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <g opacity="0.4">
@@ -11,6 +10,5 @@ export const UsdCoinUsdcTwotone: React.FC<IconProps> = (props) => {
       <path d="M12 7.7998V16.1998" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
       <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

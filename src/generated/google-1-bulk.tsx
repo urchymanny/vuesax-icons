@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const GoogleIcon1Bulk: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const GoogleIcon1Bulk: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path opacity="0.58" d="M24 0H0V24H24V0Z" fill="white"/>
       <path opacity="0.4" d="M7.7002 15.71L4.59021 21L1.41016 15.71H7.7002Z" fill="currentColor"/>
       <path d="M12.0002 8.41L7.7002 15.71H1.41016L8.82019 3L12.0002 8.41Z" fill="currentColor"/>
@@ -12,6 +11,5 @@ export const GoogleIcon1Bulk: React.FC<IconProps> = (props) => {
       <path opacity="0.4" d="M22.5308 15.71C22.1108 16.37 19.4108 21 19.4108 21L16.3008 15.71H22.5308Z" fill="currentColor"/>
       <path d="M19.4098 21H4.58984L7.69983 15.71H16.2998L19.4098 21Z" fill="currentColor"/>
       <path opacity="0.4" d="M16.2992 15.7102H7.69922L11.9992 8.41016L16.2992 15.7102Z" fill="currentColor"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

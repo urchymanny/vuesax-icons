@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const GridIcon1Bold: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const GridIcon1Bold: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M7.75 2V7.8H2C2 4.19 4.15 2.02 7.75 2Z" fill="currentColor"/>
       <path d="M22 7.8H16.25V2C19.85 2.02 22 4.19 22 7.8Z" fill="currentColor"/>
       <path d="M22 16.3008C21.96 19.8508 19.82 21.9808 16.25 22.0008V16.3008H22Z" fill="currentColor"/>
@@ -13,6 +12,5 @@ export const GridIcon1Bold: React.FC<IconProps> = (props) => {
       <path d="M14.75 9.30078H9.25V14.8008H14.75V9.30078Z" fill="currentColor"/>
       <path d="M14.75 2H9.25V7.8H14.75V2Z" fill="currentColor"/>
       <path d="M14.75 16.3008H9.25V22.0008H14.75V16.3008Z" fill="currentColor"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

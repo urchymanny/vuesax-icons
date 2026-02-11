@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const CardanoAdaBold: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const CardanoAdaBold: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M17.1484 10C17.7007 10 18.1484 9.55228 18.1484 9C18.1484 8.44772 17.7007 8 17.1484 8C16.5962 8 16.1484 8.44772 16.1484 9C16.1484 9.55228 16.5962 10 17.1484 10Z" fill="black"/>
       <path d="M17.1484 16C17.7007 16 18.1484 15.5523 18.1484 15C18.1484 14.4477 17.7007 14 17.1484 14C16.5962 14 16.1484 14.4477 16.1484 15C16.1484 15.5523 16.5962 16 17.1484 16Z" fill="black"/>
       <path d="M19.75 13C20.3023 13 20.75 12.5523 20.75 12C20.75 11.4477 20.3023 11 19.75 11C19.1977 11 18.75 11.4477 18.75 12C18.75 12.5523 19.1977 13 19.75 13Z" fill="black"/>
@@ -34,6 +33,5 @@ export const CardanoAdaBold: React.FC<IconProps> = (props) => {
       <path d="M22.4991 12.8811C22.0191 12.8811 21.6191 12.4911 21.6191 12.0111V12.0011C21.6191 11.5211 22.0091 11.1211 22.4991 11.1211C22.9891 11.1211 23.3792 11.5111 23.3792 12.0011C23.3792 12.4911 22.9791 12.8811 22.4991 12.8811Z" fill="black"/>
       <path d="M20.3008 17.7483C19.8908 17.7483 19.5508 17.4183 19.5508 16.9983V16.9883C19.5508 16.5783 19.8908 16.2383 20.3008 16.2383C20.7108 16.2383 21.0508 16.5783 21.0508 16.9883C21.0508 17.3983 20.7108 17.7483 20.3008 17.7483Z" fill="black"/>
       <path d="M20.3008 7.76172C19.8908 7.76172 19.5508 7.42172 19.5508 7.01172C19.5508 6.60172 19.8908 6.26172 20.3008 6.26172C20.7108 6.26172 21.0508 6.59172 21.0508 7.01172V7.02172C21.0508 7.42172 20.7108 7.76172 20.3008 7.76172Z" fill="black"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

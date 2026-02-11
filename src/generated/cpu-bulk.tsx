@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const CpuBulk: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const CpuBulk: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path opacity="0.4" d="M15 4H9C6.24 4 4 6.24 4 9V15C4 17.76 6.24 20 9 20H15C17.76 20 20 17.76 20 15V9C20 6.24 17.76 4 15 4ZM17.26 14.26C17.26 15.92 15.92 17.26 14.26 17.26H9.74C8.08 17.26 6.74 15.92 6.74 14.26V9.74C6.74 8.08 8.08 6.74 9.74 6.74H14.25C15.91 6.74 17.25 8.08 17.25 9.74V14.26H17.26Z" fill="currentColor"/>
       <path d="M9.06055 2.75V4H9.00055C8.50055 4 8.02055 4.07 7.56055 4.21V2.75C7.56055 2.34 7.89055 2 8.31055 2C8.72055 2 9.06055 2.34 9.06055 2.75Z" fill="currentColor"/>
       <path d="M12.75 2.75V4H11.25V2.75C11.25 2.34 11.59 2 12 2C12.41 2 12.75 2.34 12.75 2.75Z" fill="currentColor"/>
@@ -18,6 +17,5 @@ export const CpuBulk: React.FC<IconProps> = (props) => {
       <path d="M4 11.25V12.75H2.75C2.34 12.75 2 12.41 2 12C2 11.58 2.34 11.25 2.75 11.25H4Z" fill="currentColor"/>
       <path d="M4.21 16.45H2.75C2.34 16.45 2 16.11 2 15.7C2 15.28 2.34 14.95 2.75 14.95H4V15C4 15.5 4.07 15.99 4.21 16.45Z" fill="currentColor"/>
       <path d="M17.2602 9.73999V14.25C17.2602 15.91 15.9202 17.25 14.2602 17.25H9.74023C8.08023 17.25 6.74023 15.91 6.74023 14.25V9.73999C6.74023 8.07999 8.08023 6.73999 9.74023 6.73999H14.2502C15.9102 6.73999 17.2602 8.08999 17.2602 9.73999Z" fill="currentColor"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

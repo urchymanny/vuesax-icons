@@ -1,7 +1,7 @@
 {
   "author": "Uchenna Mba",
   "name": "vuesax-icon-pack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vuesax icons library for React - similar to lucide-react",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

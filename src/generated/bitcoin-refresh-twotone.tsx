@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const BitcoinRefreshTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const BitcoinRefreshTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M4.47 11.4202L2.73 9.68018L1 11.4202" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M19.5293 12.5801L21.2693 14.3201L23.0093 12.5801" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M21.2595 14.3203V12.0002C21.2595 6.88024 17.1095 2.74023 11.9995 2.74023C9.07953 2.74023 6.46953 4.10027 4.76953 6.21027" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -14,6 +13,5 @@ export const BitcoinRefreshTwotone: React.FC<IconProps> = (props) => {
       <path d="M11.8008 15.5V17.25" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M11.8008 6.75V8.5" stroke="currentColor" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       </g>
-    </Icon>
-  );
-};
+  </Icon>
+));

@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const ConvertIcon3dCubeBroken: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const ConvertIcon3dCubeBroken: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path d="M22 15C22 18.87 18.87 22 15 22L16.05 20.25" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M2 9C2 5.13 5.13 2 9 2L7.95 3.75" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M13.6992 4.44995L17.6792 6.74994L21.6192 4.45996" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -12,6 +11,5 @@ export const ConvertIcon3dCubeBroken: React.FC<IconProps> = (props) => {
       <path d="M2.34961 15.45L6.31961 17.7499L10.2696 15.46" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M6.32031 21.82V17.74" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M10.65 16.23C10.65 15.61 10.21 14.85 9.66 14.55L7.25999 13.2199C6.74999 12.9299 5.91 12.9299 5.39 13.2199L2.99001 14.55C2.45001 14.85 2 15.61 2 16.23V18.77C2 19.39 2.44001 20.15 2.99001 20.45L5.39 21.78C5.9 22.07 6.73999 22.07 7.25999 21.78L9.66 20.45" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

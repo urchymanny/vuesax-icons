@@ -1,13 +1,11 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const BloggerTwotone: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const BloggerTwotone: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path opacity="0.4" d="M6 9V15C6 17 7 18 9 18H15C17 18 18 17 18 15V12C18 11.45 17.55 11 17 11C16.45 11 16 10.55 16 10V9C16 7 15 6 13 6H9C7 6 6 7 6 9Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10"/>
       <path opacity="0.4" d="M10 10H12" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path opacity="0.4" d="M10 14H14" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M15 22H9C4 22 2 20 2 15V9C2 4 4 2 9 2H15C20 2 22 4 22 9V15C22 20 20 22 15 22Z" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

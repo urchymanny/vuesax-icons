@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const GroupIcon1Bulk: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const GroupIcon1Bulk: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <path opacity="0.4" d="M22 14V17C22 18.66 20.66 20 19 20H18C18 18.9 17.1 18 16 18C14.9 18 14 18.9 14 20H10C10 18.9 9.1 18 8 18C6.9 18 6 18.9 6 20H5C3.34 20 2 18.66 2 17V14H13C14.1 14 15 13.1 15 12V5H16.84C17.56 5 18.22 5.39001 18.58 6.01001L20.29 9H19C18.45 9 18 9.45 18 10V13C18 13.55 18.45 14 19 14H22Z" fill="currentColor"/>
       <path d="M8 22C9.10457 22 10 21.1046 10 20C10 18.8954 9.10457 18 8 18C6.89543 18 6 18.8954 6 20C6 21.1046 6.89543 22 8 22Z" fill="currentColor"/>
       <path d="M16 22C17.1046 22 18 21.1046 18 20C18 18.8954 17.1046 18 16 18C14.8954 18 14 18.8954 14 20C14 21.1046 14.8954 22 16 22Z" fill="currentColor"/>
@@ -12,6 +11,5 @@ export const GroupIcon1Bulk: React.FC<IconProps> = (props) => {
       <path d="M2.08002 5.25H1C0.59 5.25 0.25 5.59 0.25 6C0.25 6.41 0.59 6.75 1 6.75H2V6C2 5.74 2.03002 5.49 2.08002 5.25Z" fill="currentColor"/>
       <path d="M1 8.25C0.59 8.25 0.25 8.59 0.25 9C0.25 9.41 0.59 9.75 1 9.75H2V8.25H1Z" fill="currentColor"/>
       <path d="M1 11.25C0.59 11.25 0.25 11.59 0.25 12C0.25 12.41 0.59 12.75 1 12.75H2V11.25H1Z" fill="currentColor"/>
-    </Icon>
-  );
-};
+  </Icon>
+));

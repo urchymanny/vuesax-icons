@@ -1,9 +1,8 @@
-import React from 'react';
-import { Icon, IconProps } from '../Icon';
+import React, { ForwardRefExoticComponent, RefAttributes } from 'react';
+import { Icon, IconProps, VuesaxIconComponent } from '../Icon';
 
-export const PathIcon2Linear: React.FC<IconProps> = (props) => {
-  return (
-    <Icon {...props}>
+export const PathIcon2Linear: VuesaxIconComponent = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
+  <Icon ref={ref} {...props}>
       <g clipPath="url(#clip0_3195_640)">
       <path d="M9.87001 22.0001H14.16C15.78 22.0001 16.85 20.8401 16.53 19.4301L15.84 16.3501H8.20001L7.51001 19.4301C7.20001 20.7601 8.34001 22.0001 9.87001 22.0001Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
       <path d="M15.83 16.3501L18.77 13.7401C20.41 12.2801 20.48 11.2601 19.18 9.61012L13.99 3.03012C12.9 1.65012 11.12 1.65012 10.02 3.03012L4.84 9.61012C3.54 11.2601 3.54 12.3301 5.25 13.7401L8.19 16.3501" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -14,6 +13,5 @@ export const PathIcon2Linear: React.FC<IconProps> = (props) => {
       <rect width="24" height="24" fill="white"/>
       </clipPath>
       </defs>
-    </Icon>
-  );
-};
+  </Icon>
+));
