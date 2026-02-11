@@ -1,0 +1,42 @@
+{
+  "name": "vuesax-icons",
+  "version": "1.0.0",
+  "description": "Vuesax icons library for React - similar to lucide-react",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build:icons": "node scripts/build.js",
+    "build:ts": "tsc",
+    "build": "npm run build:icons && npm run build:ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "icons",
+    "vuesax",
+    "react",
+    "svg"
+  ],
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/node": "^20.0.0",
+    "react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}

@@ -1,0 +1,15 @@
+import React from 'react';
+import { Icon, IconProps } from '../Icon';
+
+export const GoogleIcon1Twotone: React.FC<IconProps> = (props) => {
+  return (
+    <Icon {...props}>
+      <path d="M15.1799 3H8.82996L1.41992 15.71L4.59991 21H19.4199C19.4199 21 22.5999 15.55 22.5999 15.63C22.5999 15.71 15.1799 3 15.1799 3Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+      <g opacity="0.4">
+      <path d="M8.82031 3L19.4103 21" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M15.1798 3L4.58984 21" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M1.5 15.71H22" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+      </g>
+    </Icon>
+  );
+};

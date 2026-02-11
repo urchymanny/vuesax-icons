@@ -1,0 +1,11 @@
+import React from 'react';
+import { Icon, IconProps } from '../Icon';
+
+export const ArrowSquareLeftTwotone: React.FC<IconProps> = (props) => {
+  return (
+    <Icon {...props}>
+      <path d="M9 22H15C20 22 22 20 22 15V9C22 4 20 2 15 2H9C4 2 2 4 2 9V15C2 20 4 22 9 22Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+      <path opacity="0.4" d="M13.2602 15.5302L9.74023 12.0002L13.2602 8.47021" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+    </Icon>
+  );
+};

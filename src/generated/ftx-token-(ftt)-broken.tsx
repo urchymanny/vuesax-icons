@@ -1,0 +1,13 @@
+import React from 'react';
+import { Icon, IconProps } from '../Icon';
+
+export const FtxTokenFttBroken: React.FC<IconProps> = (props) => {
+  return (
+    <Icon {...props}>
+      <path d="M21 2H9C8.45 2 8 2.45 8 3V6C8 6.55 8.45 7 9 7H21C21.55 7 22 6.55 22 6V3C22 2.45 21.55 2 21 2Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M12 17H7V22H12V17Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M7 9.5H2V14.5H7V9.5Z" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+      <path d="M17 14.3599H18V9.63989H9.5V14.3599H12.92" stroke="black" strokeWidth="1.5" strokeMiterlimit="10" strokeLinecap="round" strokeLinejoin="round"/>
+    </Icon>
+  );
+};

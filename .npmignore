@@ -1,0 +1,29 @@
+# Source files
+src/
+scripts/
+icons/
+
+# Development files
+.git/
+.gitignore
+*.log
+.DS_Store
+*.tsbuildinfo
+
+# Build artifacts (keep dist/)
+*.map
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+coverage/
+.nyc_output/
+
+# Misc
+node_modules/
+.env
+.env.local
