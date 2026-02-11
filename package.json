@@ -1,5 +1,6 @@
 {
-  "name": "vuesax-icons",
+  "author": "Uchenna Mba",
+  "name": "vuesax-icon-pack",
   "version": "1.0.0",
   "description": "Vuesax icons library for React - similar to lucide-react",
   "main": "dist/index.js",
@@ -20,15 +21,14 @@
     "react",
     "svg"
   ],
-  "author": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/urchymanny/vuesax-icons.git"
   },
   "bugs": {
     "url": ""
   },
-  "homepage": "",
+  "homepage": "https://github.com/urchymanny/vuesax-icons",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0"
